@@ -124,11 +124,23 @@ public class Calculator {
 
     public double factorial(double num) {
         double result = 1;
-        if(num < 0) return 0;
-        if(num == 0 || num == 1) return 1;
+        try{
+            if(num < 0) {
+                result = Double.NaN;
+                throw new ArithmeticException("Case of NaN factorial if < 0");
+            }
 
-        for(int i = 1; i <= num; i++){
-            result *= i;
+            if(num == 0 || num == 1) return 1;
+
+            for(int i = 1; i <= num; i++){
+                result *= i;
+            }
+        }
+        catch(ArithmeticException err) {
+            logger.info("Number cannot be negative " + err.getMessage());
+        }
+        finally {
+            logger.info("Result of factorial is: " + result);
         }
 
         return result;
