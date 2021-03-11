@@ -114,7 +114,7 @@ public class Calculator {
             }
         }
         catch(ArithmeticException err){
-            logger.info("Number cannot be negative " + err.getMessage());
+            logger.error("Number cannot be negative " + err.getMessage());
         }
         finally {
             logger.info("Result of naturalLog is : " + result);
@@ -137,7 +137,7 @@ public class Calculator {
             }
         }
         catch(ArithmeticException err) {
-            logger.info("Number cannot be negative " + err.getMessage());
+            logger.error("Number cannot be negative " + err.getMessage());
         }
         finally {
             logger.info("Result of factorial is: " + result);
@@ -158,7 +158,7 @@ public class Calculator {
                 result = Math.sqrt(num);
             }
         }catch(ArithmeticException err){
-            logger.info("Number cannot be negative " + err.getMessage());
+            logger.error("Number cannot be negative " + err.getMessage());
         }finally {
             logger.info("Result of squareRoot is : " + result);
         }

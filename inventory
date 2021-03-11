@@ -1,2 +1,3 @@
 [ubuntu]
-172.17.0.1 ansible_ssh_user=mars remote_user=mars ask_pass=true
+172.16.128.133 ansible_ssh_user=mars remote_user=mars
+172.16.128.120 ansible_ssh_user=rushikesh remote_user=rushikesh
