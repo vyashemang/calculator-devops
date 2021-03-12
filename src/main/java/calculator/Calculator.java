@@ -31,6 +31,7 @@ public class Calculator {
             }
 
             double num;
+            int num1;
             switch (choice) {
                 case 1:
                     try {
@@ -47,13 +48,13 @@ public class Calculator {
                 case 2:
                     try {
                         System.out.print("Enter the number : ");
-                        num = scanner.nextDouble();
+                        num1 = scanner.nextInt();
                     } catch (InputMismatchException error) {
                         logger.error("Invalid input, Entered input is not a number");
                         return;
                     }
                     System.out.println("================================================");
-                    System.out.println("Factorial is: " + calculator.factorial(num));
+                    System.out.println("Factorial is: " + calculator.factorial(num1));
                     System.out.println("================================================");
                     break;
                 case 3:
@@ -98,7 +99,7 @@ public class Calculator {
         logger.info("Calculating Power  of two numbers " + num + " and " + num2);
         result = Math.pow(num, num2);
         logger.info("Result of power is : " + result);
-        return Math.pow(num, num2);
+        return result;
     }
 
     public double naturalLog(double num) {
@@ -125,6 +126,10 @@ public class Calculator {
     public double factorial(double num) {
         double result = 1;
         try{
+            if(num != (int)num){
+                result = Double.NaN;
+            }
+
             if(num < 0) {
                 result = Double.NaN;
                 throw new ArithmeticException("Case of NaN factorial if < 0");
