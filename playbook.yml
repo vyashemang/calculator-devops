@@ -1,5 +1,5 @@
 ---
-- name: Copy jar file to remoter server
+- name: Pull docker image
   hosts: all
   tasks:
     - name: Pull Image

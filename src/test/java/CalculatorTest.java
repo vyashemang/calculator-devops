@@ -6,8 +6,6 @@ public class CalculatorTest {
     private static final double DELTA = 1e-15;
     Calculator cal = new Calculator();
 
-    // tehafe9096 tehafe9096@
-
     @Test
     public void squareRootTruePositive(){
         assertEquals("Square Root of number for True Positive", 3.0, cal.squareRoot(9), DELTA);
@@ -24,7 +22,6 @@ public class CalculatorTest {
 
     @Test
     public void factorialTruePositive(){
-        // -4, 6.8
         assertEquals("Factorial of number for True positive", Double.NaN,cal.factorial(6.8), DELTA);
         assertEquals("Factorial of number for True positive", Double.NaN,cal.factorial(-4), DELTA);
         assertEquals("Factorial of number for True positive", 6.0,cal.factorial(3), DELTA);
