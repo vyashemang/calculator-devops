@@ -54,7 +54,7 @@ public class Calculator {
                         return;
                     }
                     System.out.println("================================================");
-                    System.out.println("Factorial is: " + calculator.factorial(num1));
+                    System.out.println("Factorial of a number is : " + calculator.factorial(num1));
                     System.out.println("================================================");
                     break;
                 case 3:
