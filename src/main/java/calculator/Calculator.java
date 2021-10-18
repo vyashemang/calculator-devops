@@ -85,9 +85,7 @@ public class Calculator {
                     System.out.println("================================================");
                     break;
                 default:
-                    System.out.println("================================================");
                     System.out.println("Thank you for using the calculator");
-                    System.out.println("================================================");
                     return;
             }
         } while (true);
